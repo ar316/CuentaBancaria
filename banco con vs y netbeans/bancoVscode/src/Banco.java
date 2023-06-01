@@ -24,7 +24,7 @@ public class Banco {
         }
         return cadena;
       }else{
-        return "no hay clientes";
+        return "Aun no hay Clientes";
       }
     }
 
