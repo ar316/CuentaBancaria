@@ -1,0 +1,18 @@
+pubic class holaGrupo1{
+
+	private String nombre = "arnold";
+	private int id = 12134;
+	private String  apellido = "briñez"
+	
+	static void main(String[] args){
+
+		System.out.println("nombre"+ " "+ id + " " apellido);
+	
+	}
+
+
+
+
+
+
+}
