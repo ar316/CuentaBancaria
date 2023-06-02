@@ -50,7 +50,7 @@ public class Cliente {
             Movimiento mov = new Movimiento("deposito", amount);
             agregarMov(mov);
             deposito(amount);  
-            JOptionPane.showConfirmDialog(null, "Deposito realizado correctamente", "Deposito", i, i, null);
+            JOptionPane.showConfirmDialog(null, "el deposito se ha realizdo correctamente", "Deposito", i, i, null);
         }
         else if(i == 2){
             String monto =  JOptionPane.showInputDialog(null,  "digite la cantidad a retirar");
