@@ -48,12 +48,7 @@ public class Gui extends JFrame {
 		JButton btnAgregar = new JButton("Agregar Cliente");
 		btnAgregar.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			String nombre =JOptionPane.showInputDialog(null,  "nombre");
-			String ncuenta =  JOptionPane.showInputDialog(null,  "numero de cuenta");
-			String balance =  JOptionPane.showInputDialog(null,  "Balance");
-			double monto =Double.parseDouble(balance) ;	
-			Cliente client = new Cliente(nombre,ncuenta,monto);
-			bancop.AgregarCliente(client);
+			bancop.capturarDatos();
 
 			}
 		});
@@ -70,6 +65,28 @@ public class Gui extends JFrame {
 		btnMostrarInfoClientes.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				bancop.info();
+
+			}
+		});
+
+		JButton realizarmov = new JButton("realizar movimiento");
+		realizarmov.setBounds(24, 120, 172, 27);
+		contentPane.add(realizarmov);
+		realizarmov.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			String n= JOptionPane.showInputDialog(null,"digite el nombre del cliente");
+			bancop.agregarMov(n);
+
+			}
+		});
+
+		JButton verMovimeintos = new JButton("ver movimientos");
+		verMovimeintos.setBounds(24, 160, 172, 27);
+		contentPane.add(verMovimeintos);
+		verMovimeintos.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				String n= JOptionPane.showInputDialog(null,"digite el nombre del cliente");
+                bancop.verMov(n);
 
 			}
 		});
