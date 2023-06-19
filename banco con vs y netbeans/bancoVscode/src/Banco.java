@@ -6,16 +6,16 @@ public class Banco {
     private String nombre;
     ArrayList<Cliente> clients;
 
-
+  //constructor del banco 
     public Banco(String nombre) {
         this.nombre = nombre;
         clients = new ArrayList<>();
     }
-
+    //metodo para agregar clientes a la lista
     public void AgregarCliente(Cliente c) {
         this.clients.add(c);
     }
-
+      //convierte una lista de Clientes en un String para mostrarlo por JoptionPane
     private String display(){
       String  cadena = "";
       if(!clients.isEmpty()){
@@ -27,11 +27,11 @@ public class Banco {
         return "Aun no hay Clientes";
       }
     }
-
+    //muestra la cadena display() en un JoptionPane
     public void info(){
        JOptionPane.showMessageDialog(null,"Lista de Clientes"+"\n"+display());
     }
-    
+    //metodo para capturar datos del cliente 
     public void capturarDatos(){
       String nombre =JOptionPane.showInputDialog(null,  "nombre");
 			String ncuenta =  JOptionPane.showInputDialog(null,  "numero de cuenta");
@@ -40,7 +40,7 @@ public class Banco {
 			Cliente client = new Cliente(nombre,ncuenta,monto);
       AgregarCliente(client);
     }
-
+    //metodo para validar si existe el cliente
     public Cliente exite(String nomb){
       for(Cliente c : clients){
         if(c.getUsername().equals(nomb)){

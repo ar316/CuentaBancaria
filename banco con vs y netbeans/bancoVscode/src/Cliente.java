@@ -84,7 +84,7 @@ public class Cliente {
           }
           return cadena;
         }else{
-          return "Aun no hay Clientes";
+          return "Aun no hay movimientos de este cliente";
         }
       }
   
